@@ -20,4 +20,4 @@
       password: "{{bigip_pass}}"
       body: "{{ lookup('file','./as3declations/simppleas3.json') }}"
       body_format: json
-      validate_certs: fal
+      validate_certs: false
