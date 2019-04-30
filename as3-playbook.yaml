@@ -9,6 +9,8 @@
   vars:
     uri_method: POST
 
+  tasks:
+
   - name: Issue AS3 declaration
     uri:
       url: https://3.9.55.160/mgmt/shared/appsvcs/declare
