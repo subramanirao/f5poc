@@ -3,6 +3,7 @@
   connection: local
   gather_facts: no
 
+#Variables start here
   vars_files:
     - ../creds/bigip_creds.yaml
 
@@ -19,4 +20,4 @@
       password: "{{bigip_pass}}"
       body: "{{ lookup('file','./as3declations/simppleas3.json') }}"
       body_format: json
-      validate_certs: false
+      validate_certs: fal
