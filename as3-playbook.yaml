@@ -4,7 +4,7 @@
   gather_facts: no
 
   vars_files:
-    -../creds/bigip_creds.yaml
+    - ../creds/bigip_creds.yaml
 
   vars:
     uri_method: POST
@@ -19,3 +19,4 @@
       password: "{{bigip_pass}}"
       body: "{{ lookup('file','./as3declations/simppleas3.json') }}"
       body_format: json
+      validate_certs: false
