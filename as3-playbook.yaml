@@ -1,0 +1,19 @@
+- name: Sending AS3 declaration
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    -../creds/bigip_creds.yaml
+
+  vars:
+    uri_method: POST
+
+  - name: Issue AS3 declaration
+    uri:
+      url: https://3.9.55.160/mgmt/shared/appsvcs/declare
+      method: "{{uri_method}}"
+      user: "{{bigip_user}}"
+      password: "{{bigip_pass}}"
+      body: "{{ lookup('file','./as3declations/simppleas3.json') }}"
+      body_format: json
