@@ -3,7 +3,7 @@
   connection: local
   gather_facts: no
 
-#Variables start her
+#Variables start here
   vars_files:
     - ../creds/bigip_creds.yaml
 
